@@ -2,17 +2,20 @@
   "name": "cv",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "serve": "serve -p 3001 -s docs"
+    "serve": "serve -p 3001 docs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gyorgygutai/cv.git"
   },
   "dependencies": {
+    "html-to-docx": "^1.8.0",
+    "puppeteer": "^24.25.0",
     "serve": "^14.2.5"
   }
 }

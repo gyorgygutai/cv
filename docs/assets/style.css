@@ -20,7 +20,7 @@
   --selectionColor: rgba(109, 175, 255, 0.5);
   --content-padding: 72px;
   --badge-color: #f04b4b;
-  --sidebar-width: min(330px, calc(100vw - 48px));
+  --sidebar-width: 0;
   --marketingBackground: #fafafa;
   --wash1: #e5e5e5;
   --wash2: #f2f2f2;
@@ -135,22 +135,12 @@
   box-sizing: border-box;
   list-style-type: none;
 }
-html {
-  overflow: hidden;
-}
-body,
-html {
-  width: 100%;
-  height: 100%;
-}
 body {
   font-family: var(--default-font);
   font-size: var(--type-size);
   line-height: var(--line-height);
   background-color: var(--backgroundColor);
   color: var(--grey1);
-  overflow-x: hidden !important;
-  overflow-y: scroll;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
@@ -6005,7 +5995,7 @@ input.Post_hiddenURL__u5tLf {
   flex-shrink: 0;
   padding: 0 48px;
   display: grid;
-  width: calc(100% - var(--compressed-sidebar-width));
+  width: 100%;
   margin: auto;
 }
 #AppWrapper_container__j_5Tm[data-full-width="true"] main,
@@ -6025,11 +6015,11 @@ input.Post_hiddenURL__u5tLf {
 }
 @media only screen and (max-width: 540px) {
   #AppWrapper_container__j_5Tm {
-    width: calc(100% + var(--sidebar-width));
+    width: 100%;
   }
   #AppWrapper_container__j_5Tm main {
-    width: calc(100% - var(--sidebar-width));
-    margin-left: calc((100% - var(--sidebar-width)) * -1);
+    width: 100%;
+    margin: auto;
   }
 }
 @media only screen and (max-width: 480px) {
