@@ -46,16 +46,6 @@ jobs:
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: node scripts/generate_pdf.js
 
-      - name: Generate DOCX
-        env:
-          PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
-        run: node scripts/generate_docx.js
-
-      - name: Generate TXT
-        env:
-          PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
-        run: node scripts/generate_txt.js
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
