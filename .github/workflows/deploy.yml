@@ -42,15 +42,15 @@ jobs:
           DOMAIN=$(cat CNAME | tr -d '\n')
           sed -i -E "s#href=\"cv_gyorgy_gutai\.(pdf|png)\"#href=\"https://${DOMAIN}/cv_gyorgy_gutai.\1\"#g" docs/index.html
 
-      - name: Generate PNG
-        env:
-          PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
-        run: node scripts/generate_png.js
-
       - name: Generate PDF
         env:
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
-        run: node scripts/generate_pdf.js
+        run: npm run generate:pdf
+
+      - name: Generate PNG
+        env:
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
+        run: npm run generate:png
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

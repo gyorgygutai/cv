@@ -1,0 +1,7 @@
+.show-only-when-print {
+    display: block;
+}
+
+.show-only-when-screen {
+    display: none;
+}
