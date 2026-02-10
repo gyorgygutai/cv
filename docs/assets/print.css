@@ -5,3 +5,7 @@
 .show-only-when-screen {
     display: none;
 }
+
+.print-page-break {
+    break-after: page;
+}

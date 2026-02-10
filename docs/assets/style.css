@@ -198,11 +198,18 @@ button {
         display: none;
     }
 }
+
 h3 {
     font-size: var(--type-size);
     margin-bottom: 4px;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--grey1);
+}
+h4 {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--grey1);
+    margin: 8px 0 4px;
 }
 section {
     margin: 60px 0;
@@ -211,7 +218,7 @@ section:last-child {
     margin-bottom: 0;
 }
 section:first-of-type {
-    margin: 36px 0;
+    margin: 36px 0 20px;
 }
 section p {
     color: var(--grey2);
@@ -245,6 +252,13 @@ fieldset {
 a.MegaLink_megalink__u_TFB {
     text-decoration: none;
     color: inherit;
+}
+.MegaLink_jumpLink {
+    text-decoration: none;
+    color: var(--grey2);
+}
+#Profile_featuredProjects a {
+    display: inline-block;
 }
 @media (hover: hover) {
     a.MegaLink_megalink__u_TFB[data-hover="true"]:hover {
@@ -2603,8 +2617,10 @@ label#ProfilePhotoPicker_profilePhotoPicker__3G7an
 }
 .ProfilePhoto_profilePhoto__WTkVX {
     position: relative;
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
-    background-color: var(--backgroundColor);
+    background-color: #ccc;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
@@ -3353,22 +3369,20 @@ div[data-name="attachmentButtons"] + .ProfileItem_collaborators__aSb2p {
     margin-top: 12px;
 }
 @media only screen and (max-width: 480px) {
-    .ProfileItem_experience__YXtvH,
-    .ProfileItem_form__qIY_4 .ProfileItem_experience__YXtvH {
+    .ProfileItem_experience__YXtvH {
         flex-direction: column;
+    }
+    #projects .ProfileItem_experience__YXtvH {
         margin-left: 16px;
     }
-    .ProfileItem_duration__utkpJ,
-    .ProfileItem_form__qIY_4 .ProfileItem_duration__utkpJ {
+    .ProfileItem_duration__utkpJ {
         text-align: left;
     }
-    .ProfileItem_duration__utkpJ:after,
-    .ProfileItem_form__qIY_4 .ProfileItem_duration__utkpJ:after {
+    .ProfileItem_duration__utkpJ:after {
         content: "";
         display: none;
     }
-    .ProfileItem_duration__utkpJ span,
-    .ProfileItem_form__qIY_4 .ProfileItem_duration__utkpJ span {
+    .ProfileItem_duration__utkpJ span {
         position: relative;
     }
 }
@@ -3456,7 +3470,6 @@ h3 + .ContactItem_contact__9zpDH {
 @media only screen and (max-width: 480px) {
     .ContactItem_contact__9zpDH,
     .ContactItem_insideForm__IfNrh.ContactItem_contact__9zpDH {
-        margin-left: 16px;
         flex-direction: column;
     }
     .ContactItem_insideForm__IfNrh.ContactItem_platform__6b5md,
@@ -3491,9 +3504,6 @@ h3 + .ContactItem_contact__9zpDH {
     flex-direction: row;
     align-items: center;
     column-gap: 16px;
-}
-.Profile_profileHeader__KZGM6 .Profile_profilePhotoWrap__FpL2P {
-    align-self: flex-end;
 }
 .Profile_profileInfo__to5I_ {
     flex: 1 1;
@@ -3616,9 +3626,21 @@ h3 + .ContactItem_contact__9zpDH {
     font-weight: 500 !important;
     font-size: 16px;
 }
-section#Profile_aboutID__Z2GAs {
+section#Profile_aboutID__Z2GAs,
+#Profile_coreSkills,
+#Profile_featuresProjects {
     color: var(--grey2);
 }
+
+#Profile_coreSkills,
+#Profile_featuredProjects {
+    margin: 24px 0;
+}
+
+#Profile_coreSkills li {
+    margin: 8px 0 16px 0;
+}
+
 section#Profile_aboutID__Z2GAs ol,
 section#Profile_aboutID__Z2GAs p,
 section#Profile_aboutID__Z2GAs ul {
@@ -3702,7 +3724,7 @@ section#Profile_aboutID__Z2GAs a {
     grid-column-gap: 6px;
     column-gap: 6px;
     margin-top: 5px;
-    grid-template-columns: fit-content(100%) fit-content(100%);
+    grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%);
 }
 .Profile_badges__uMcrx .Profile_link__K5O7y a {
     font-size: var(--secondary-type-size);
@@ -3781,12 +3803,10 @@ section#Profile_tabs__i_pTF {
 :root[data-theme="Swiss"] .Profile_badges__uMcrx .Profile_link__K5O7y a:active {
     background-color: var(--inputBackgroundColor);
 }
+
 @media only screen and (max-width: 480px) {
     #Profile_aboutID__Z2GAs h3 {
         margin-bottom: 12px;
-    }
-    #Profile_aboutID__Z2GAs .Profile_about__Q_Z_r {
-        margin-left: 16px;
     }
 }
 @media print {
