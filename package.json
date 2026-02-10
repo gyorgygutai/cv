@@ -1,12 +1,14 @@
 {
   "name": "cv",
   "version": "1.0.0",
-  "description": "",
+  "description": "György Gutai's CV built with Eleventy",
   "type": "module",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
     "serve": "serve -p 3001 docs"
   },
   "repository": {
@@ -17,5 +19,11 @@
     "html-to-docx": "^1.8.0",
     "puppeteer": "^24.25.0",
     "serve": "^14.2.5"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
   }
 }
