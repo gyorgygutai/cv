@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "serve": "serve -p 3001 docs"
+    "serve": "serve -p 3001 docs",
+    "generate:pdf": "node scripts/generate_pdf.js",
+    "generate:png": "node scripts/generate_png.js"
   },
   "repository": {
     "type": "git",

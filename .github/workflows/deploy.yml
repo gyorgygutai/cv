@@ -36,6 +36,12 @@ jobs:
         with:
           chrome-version: stable
 
+      # Using absolute urls ensures no broken links in the PDF export
+      - name: Transform PDF and PNG links to use absolute URLs
+        run: |
+          DOMAIN=$(cat CNAME | tr -d '\n')
+          sed -i -E "s#href=\"cv_gyorgy_gutai\.(pdf|png)\"#href=\"https://${DOMAIN}/cv_gyorgy_gutai.\1\"#g" docs/index.html
+
       - name: Generate PNG
         env:
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
